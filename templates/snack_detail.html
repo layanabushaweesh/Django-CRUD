@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block main %}
+<a href="{% url 'snack_list'%}"> go to snack lists</a>
+
+<section>
+    <h4>details for {{ snack.title }} here</h4>
+    <p>purchaser : {{snack.purchaser}}</p>
+    <p>Description : {{snack.description}}</p>
+    
+</section>
+<h4>to update or delete press here</h4>
+<a href="{% url 'delete' snack.pk%}">Delete</a>
+<a href="{% url 'update' snack.pk %}">Update</a>
+{% endblock main %}
